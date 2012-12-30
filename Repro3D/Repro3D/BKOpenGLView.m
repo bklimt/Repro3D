@@ -34,6 +34,7 @@
   // Set up the a light centered horizontally.
   glEnable(GL_LIGHTING);
   glEnable(GL_LIGHT0);
+  glEnable(GL_NORMALIZE);
   float light1Position[] = { 0.0f, 2.0f, 0.0f, 1.0f };
   float light1Diffuse[] = { 1.0f, 1.0f, 1.0f, 1.0f };
   glLightfv(GL_LIGHT0, GL_POSITION, light1Position);
@@ -55,6 +56,8 @@
   glEnd();
 
   glScaled(1, 1, 5.0);  // This should be a no-op since 5 * 0 = 0.
+
+
   glBegin(GL_TRIANGLES);
     glVertex3d( 1, -1,  0);
     glVertex3d( 1,  1,  0);
